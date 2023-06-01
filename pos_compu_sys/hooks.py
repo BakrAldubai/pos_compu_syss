@@ -102,13 +102,12 @@ app_license = "MIT"
 # ---------------
 # Hook on document methods and events
 
-# doc_events = {
-#	"*": {
-#		"on_update": "method",
-#		"on_cancel": "method",
-#		"on_trash": "method"
-#	}
-# }
+doc_events = {
+	"Sales Invoice": {
+		"validate": "pos_compu_sys.utils.get_balance",
+        # "on_submit": "pos_compu_sys.utils.get_after_balance"
+	}
+}
 
 # Scheduled Tasks
 # ---------------
